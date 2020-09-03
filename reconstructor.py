@@ -129,7 +129,7 @@ def filter_nric(year, citizenship, last, nric_set, location_of_birth):
     else:
         first_letter = 'F'
     if location_of_birth == 'Y':
-        pattern = f'{first_letter}{year[2:]}[1-5]*{str(last)}'
+        pattern = f'{first_letter}{year[2:]}[0-5]*{str(last)}'
     else:
         pattern = f'{first_letter}{year[2:]}[5-9]*{str(last)}'
     r = re.compile(pattern)
